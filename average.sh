@@ -1,10 +1,12 @@
 #!/bin/bash 
-function max()
+function avg()
 {
-return $(( ($1+$2)/2 ))
+return $(( ($1+$2+$3+$4)/$# ))
 }
 
 arr[0]=5
 arr[1]=5
-max "${arr[@]}"
+arr[2]=10
+arr[3]=20
+avg "${arr[@]}"
 echo $?
